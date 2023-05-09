@@ -78,7 +78,7 @@
                      <div class="col-sm-6 col-md-4 col-lg-3 mt-3">
                         <div class="product-item text-center" data-id="@product.CategoryId">
                             <div class="img">
-                                <a href="">
+                                <a asp-controller="Product" asp-action="Index"asp-route-id="@product.Id">
                                     <img src="~/img/@product.ProductImages.Where(m=>m.IsMain).FirstOrDefault().Image" class="img-fluid" alt="">
                                 </a>
                             </div>
