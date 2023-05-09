@@ -36,8 +36,12 @@
                                 <span class="text-uppercase text-muted brand">@Model.CategoyName</span>
                                 <h5 class="text-uppercase">@Model.Name</h5>
                                 <div class="price d-flex flex-row align-items-center">
-                                    <span class="act-price">$@Model.Price.ToString("##")</span>
-                                    <div class="ml-2"> <small class="dis-price">$59</small> <span>40% OFF</span> </div>
+                                    <span class="act-price">$@Model.DiscountPrice.ToString("##")</span>
+                                    @if (Model.Percent != 0)
+                                    {
+                                        <div class="ml-2"> <small class="dis-price">$@Model.ActualPrice.ToString("##")</small> <span>@Model.Percent OFF</span> </div>
+                                    }
+                                   
                                 </div>
                             </div>
                             <p class="about">Shop from a wide range of t-shirt from orianz. Pefect for your everyday use, you could pair it with a stylish pair of jeans or trousers complete the look.</p>

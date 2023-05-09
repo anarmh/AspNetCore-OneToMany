@@ -18,7 +18,7 @@ namespace FiorelloFront.Controllers
         public async Task<IActionResult> Index(int? id)
         {
             if (id is null) return BadRequest();
-            Product product = await _context.Products.Include(m=>m.ProductImages).Include(m=>m.Category).Where(m=>!m.SoftDelete).FirstOrDefaultAsync(x => x.Id == id);
+            Product product = await _context.Products.Include(m=>m.Discount).Include(m=>m.ProductImages).Include(m=>m.Category).Where(m=>!m.SoftDelete).FirstOrDefaultAsync(x => x.Id == id);
 
             if (product is null) return NotFound();
 
@@ -26,7 +26,9 @@ namespace FiorelloFront.Controllers
             {
                 Id = product.Id,
                 Name = product.Name,
-                Price = product.Price,
+                ActualPrice = product.Price,
+                DiscountPrice = product.Price - (product.Price * product.Discount.Percent) / 100,
+                Percent= product.Discount.Percent,
                 ProductImages = product.ProductImages.ToList()
             };
            

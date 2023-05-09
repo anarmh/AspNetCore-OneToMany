@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eeXfSAUyIO984KvTXUOxmFf6HdSk9wVaRX1PHYz1Eq6Zy0nnx9BYgw1D595Z1hFbPYBUf8MMFnc3s0T7vyC5SA==",
+  "dgSpecHash": "p5EVSyViGE9VDDLE1BET7w6v8N86+wG0yNahkmDvvJZZMQjuxDrgjkN+/JFFA7t6vtjtYQ4Hyrqz6x9SXZRp9A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Anar\\Desktop\\AspNet Core\\OneToMany\\FiorelloFront\\FiorelloFront\\FiorelloFront.csproj",
+  "projectFilePath": "C:\\Users\\Anar\\Desktop\\AspNet Core\\AspNetCore-OneToMany\\FiorelloFront\\FiorelloFront\\FiorelloFront.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Anar\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Anar\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
