@@ -1,0 +1,9 @@
+﻿Build started...
+1>------ Build started: Project: FrontToBack, Configuration: Debug Any CPU ------
+1>C:\Users\Anar\Desktop\AspNet Core\Layout-ViewImport-ViewStart\FrontToBack\FrontToBack\FrontToBack\Models\Service.cs(6,23,6,28): warning CS8618: Non-nullable property 'Title' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+1>C:\Users\Anar\Desktop\AspNet Core\Layout-ViewImport-ViewStart\FrontToBack\FrontToBack\FrontToBack\Models\Service.cs(7,23,7,34): warning CS8618: Non-nullable property 'Description' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+1>C:\Users\Anar\Desktop\AspNet Core\Layout-ViewImport-ViewStart\FrontToBack\FrontToBack\FrontToBack\Models\Service.cs(8,23,8,27): warning CS8618: Non-nullable property 'Icon' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+1>FrontToBack -> C:\Users\Anar\Desktop\AspNet Core\Layout-ViewImport-ViewStart\FrontToBack\FrontToBack\FrontToBack\bin\Debug\net6.0\FrontToBack.dll
+1>Done building project "FrontToBack.csproj".
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+========== Elapsed 00:03,270 ==========
