@@ -9,5 +9,9 @@ namespace FrontToBack.ViewModels
         public List<Feature> Features { get; set; }
         public List<Project> Projects { get; set; }
         public List<Slider> Sliders { get; set; }
+        public List<Team> Teams { get; set; }
+        public List<Testimonial> Testimonials { get; set; }
+        public About About { get; set; }
+        public ICollection<AboutInfos> AboutInfos { get; set; }
     }
 }

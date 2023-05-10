@@ -13,5 +13,9 @@ namespace FrontToBack.Data
         public DbSet<Feature> Features { get; set; }
         public DbSet<Project> Projects { get; set; }
         public DbSet<Service> Services { get; set; }
+        public DbSet<Team> Teams { get; set; }
+        public DbSet<Testimonial> Testimonials { get; set; }
+        public DbSet<About> Abouts { get; set; }
+        public DbSet<AboutInfos> AboutInfos { get; set; }
     }
 }

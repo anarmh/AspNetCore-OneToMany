@@ -3,8 +3,10 @@ using FrontToBack.Data;
 using FrontToBack.Models;
 using FrontToBack.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 
 namespace FrontToBack.Controllers
 {
@@ -16,19 +18,27 @@ namespace FrontToBack.Controllers
             _context = context;
         }
        
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            List<Slider> sliders = _context.Sliders.ToList();
-            List<Project> projects = _context.Projects.ToList();
-            List<Service> Services = _context.Services.ToList();
-            List<Feature> features = _context.Features.ToList();
+            List<Slider> sliders = await _context.Sliders.Where(m=>!m.SoftDelete).ToListAsync();
+            List<Project> projects = await _context.Projects.Where(m => !m.SoftDelete).ToListAsync();
+            List<Service> Services = await _context.Services.Where(m => !m.SoftDelete).ToListAsync();
+            List<Feature> features = await _context.Features.Where(m => !m.SoftDelete).ToListAsync();
+            List<Team> teams = await _context.Teams.Where(m => !m.SoftDelete).ToListAsync();
+            List<Testimonial> testimonials = await _context.Testimonials.Where(m => !m.SoftDelete).ToListAsync();
+            About about=await _context.Abouts.Where(m => !m.SoftDelete).FirstOrDefaultAsync();
+            List<AboutInfos> aboutInfos = await _context.AboutInfos.Where(m => !m.SoftDelete).ToListAsync();
 
             HomeVM model = new()
             {
                 Features = features,
                 Sliders=sliders,
                 Services=Services,
-                Projects=projects
+                Projects=projects,
+                Teams=teams,
+                Testimonials=testimonials,
+                AboutInfos=aboutInfos,
+                About=about
             };
             return View(model);
         }
