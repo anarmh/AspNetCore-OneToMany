@@ -16,5 +16,9 @@ namespace FiorelloFront.Data
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<Discount> Discounts { get; set; }
+        public DbSet<About> Abouts { get; set; }
+        public DbSet<FlowersExpert> FlowersExperts { get; set; }
+        public DbSet<Say> Says { get; set; }
+        public DbSet<Instagram> Instagrams { get; set; }
     }
 }

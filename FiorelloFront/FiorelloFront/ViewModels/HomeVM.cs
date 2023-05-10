@@ -11,5 +11,9 @@ namespace FiorelloFront.ViewModels
         public IEnumerable<Blog> Blogs { get; set; }
         public IEnumerable<Category> Categories { get; set; }
         public IEnumerable<Product> Products { get; set; }
+        public About About { get; set; }
+        public IEnumerable<FlowersExpert> FlowersExperts { get; set; }
+        public IEnumerable<Say> Says { get; set; }
+        public IEnumerable<Instagram> Instagrams { get; set; }
     }
 }
