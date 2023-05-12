@@ -42,7 +42,13 @@ namespace FrontToBack.Controllers
             };
             return View(model);
         }
-
+        public async Task<IActionResult> ProjectDetail(int? id)
+        {
+            if(id == null) return BadRequest();
+            Project project = await _context.Projects.Where(m => !m.SoftDelete).Where(m=>m.Id==id).FirstOrDefaultAsync();
+            if(project is null) return NotFound();
+            return View(project);
+        }
        
     }
 }
